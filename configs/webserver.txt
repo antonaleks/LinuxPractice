@@ -1,0 +1,8 @@
+[Unit]
+Description=Web-Server
+[Service]
+Type=idle
+WorkingDirectory=/home/user/server
+ExecStart=python3 app.py
+[Install]
+WantedBy=multi-user.target
