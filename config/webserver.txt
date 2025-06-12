@@ -1,0 +1,10 @@
+[Unit]
+Description=Web-Server
+
+[Service]
+Type=idle
+WorkingDirectory=/home/user/server
+ExecStart=/usr/bin/python3 /home/sasha/flask_app/app.py
+
+[Install]
+WantedBy=multi-user.target
