@@ -1,0 +1,21 @@
+from flask import Flask, request
+
+app = Flask(__name__)
+
+@app.route('/get')
+def handle_get():
+    return "GET request received!"
+
+@app.route('/post')
+def handle_post():
+    return "POST request received"
+
+@app.route('/put')
+def handle_put():
+    return "PUT request received
+
+@app.route('/')
+def hello():
+    return "<P>Hello, World!</p>"
+
+app.run(host='0.0.0.0', port=5000)
