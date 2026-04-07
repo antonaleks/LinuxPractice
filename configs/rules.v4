@@ -1,0 +1,7 @@
+*filter
+:INPUT ACCEPT [0:0]
+:FORWARD DROP [0:0]
+:OUTPUT ACCEPT [0:0]
+-A FORWARD -i enp0s9 -o enp0s8 -p tcp --dport 5000 -j ACCEPT
+-A FORWARD -i enp0s8 -o enp0s9 -p tcp --sport 5000 -j ACCEPT
+COMMIT

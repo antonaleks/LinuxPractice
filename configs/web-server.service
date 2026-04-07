@@ -1,0 +1,12 @@
+[Unit]
+Description=Flask Web Server
+After=network.target
+
+[Service]
+User=borodin_1
+WorkingDirectory=/home/borodin_1/application
+ExecStart=/usr/bin/python3 /home/borodin_1/application/app.py
+Restart=always
+
+[Install]
+WantedBy=multi-user.target
