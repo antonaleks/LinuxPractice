@@ -1,0 +1,12 @@
+[Unit]
+Description=HTTP_Shefler_server_5000
+After=network.target
+
+[Service]
+User=shefler_1
+WorkingDirectory=/opt/http_shefler_server
+ExecStart=/usr/bin/python3 /opt/http_shefler_server/shefler_5000.py
+Restart=always
+
+[Install]
+WantedBy=multi-user.target
